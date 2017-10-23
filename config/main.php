@@ -39,14 +39,21 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
+            'class'=>'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-            ],
+            'rules' => [],
         ],
-        */
+        'localProxyService' => [
+            'class' => 'app\components\services\LocalProxyService',
+        ],
+        'shamanProxyService' => [
+            'class' => 'app\components\services\ShamanProxyService',
+        ],
+        'shamanProxyUserManager' => [
+            'class' => 'app\components\managers\ShamanProxyUserManager',
+        ],
     ],
     'params' => $params,
 ];
